@@ -3,3 +3,11 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
 }
+// {
+//   "include": [
+//   "src/**/*.astro",
+//   "src/**/*.ts",
+//   "src/**/*.js"
+//   ]
+// }
+

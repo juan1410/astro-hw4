@@ -1,0 +1,14 @@
+---
+export const viewTransition = true;
+import BaseLayout from "./BaseLayout.astro";
+const { title, pubDate, description } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <article>
+    <h1>{title}</h1>
+    <p><em>Published on {new Date(pubDate).toLocaleDateString()}</em></p>
+    <p>{description}</p>
+    <slot />
+  </article>
+</BaseLayout>

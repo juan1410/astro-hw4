@@ -1,0 +1,14 @@
+---
+export const viewTransition = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+import resources from "../data/resources.json";
+---
+
+<BaseLayout title="Resources">
+  <h2>Useful Links</h2>
+  <ul>
+    {resources.map((res) => (
+      <li><a href={res.link}>{res.name}</a></li>
+    ))}
+  </ul>
+</BaseLayout>

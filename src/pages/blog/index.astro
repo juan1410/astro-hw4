@@ -1,0 +1,18 @@
+---
+export const viewTransition = true;
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const posts = await Astro.glob('./*.md');
+---
+
+<BaseLayout title="Blog">
+  <h2>Blog Posts</h2>
+  <ul>
+    {posts.map((post) => (
+      <li>
+        <a href={`/blog/${post?.file?.split('/').pop()?.replace('.md', '')}/`}>
+          {post.frontmatter.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
