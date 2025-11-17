@@ -1,10 +1,11 @@
 :root {
-  --main-color: darkblue;
+  --main-color: rgb(0,20,50);
   --theme-text: white;
   --third-color: darkgreen;
   --font-main: 'Merriweather', serif;
   --main-padding: 3rem 4rem;
 }
+
 html, body {
   height: 100%;
   margin: 0;
