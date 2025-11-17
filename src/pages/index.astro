@@ -1,9 +1,14 @@
 ---
 export const viewTransition = true;
 import BaseLayout from "../layouts/BaseLayout.astro";
+const title="Welcome to My Blog";
 ---
 
-<BaseLayout title="Welcome to My Astro Blog">
-  <h2>Welcome</h2>
-  <p>This is a blog built with Astro to demonstrate SSG capabilities.</p>
+<BaseLayout title={title}>
+  <h1 class="pages">{title}</h1>
+  <div class="intro-text">
+    <p>
+      Hello, my name is <strong>Juan Perez</strong>. Here you can check out how I implemented files and transitions using <em>Astro</em> for this site.
+    </p>
+  </div>
 </BaseLayout>

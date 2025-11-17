@@ -2,10 +2,12 @@
 export const viewTransition = true;
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const posts = await Astro.glob('./*.md');
+const pageTitle = "Blog Posts"
 ---
 
 <BaseLayout title="Blog">
-  <h2>Blog Posts</h2>
+  <h1 class="pages">{pageTitle}</h1>
+  <h3> Here you can check out all my blogs</h3>
   <ul>
     {posts.map((post) => (
       <li>

@@ -1,14 +1,15 @@
 ---
 export const viewTransition = true;
 import BaseLayout from "./BaseLayout.astro";
-const { title, pubDate, description } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={frontmatter.title}>
   <article>
-    <h1>{title}</h1>
-    <p><em>Published on {new Date(pubDate).toLocaleDateString()}</em></p>
-    <p>{description}</p>
+    <h1>{frontmatter.title}</h1>
+    <p>Written by {frontmatter.author}</p>
+    <p><em>Published on {frontmatter.pubDate.toString().slice(0,10)}</em></p>
+    <h2>{frontmatter.description}</h2>
     <slot />
   </article>
 </BaseLayout>
