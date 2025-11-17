@@ -1,7 +1,7 @@
 ---
 title: "Astro Components vs Layouts"
 description: "Learning how and when to use components and layouts in Astro"
-pubDate: 2025-11-19
+pubDate: 2025-11-16
 author: Juan Perez
 layout: ../../layouts/BlogLayout.astro
 ---
